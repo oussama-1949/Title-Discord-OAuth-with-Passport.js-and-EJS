@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/styles/profile.css">
+</head>
+<body>
+    <h1>Welcome, <%= user.username %>#<%= user.discriminator %></h1>
+    <img src="https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>.png" alt="Avatar">
+    <p>ID: <%= user.id %></p>
+    <p>Email: <%= user.email || 'Not available' %></p>
+    <p>Locale: <%= user.locale %></p>
+    <p>Timezone: <%= user.timezone %></p>
+    <p>Account Created At: <%= user.createdAt %></p>
+</body>
+</html>
